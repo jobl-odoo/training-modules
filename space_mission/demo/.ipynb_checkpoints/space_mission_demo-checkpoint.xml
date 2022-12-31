@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record model="space_mission.spaceship" id="model_1">
+            <field name="name">Model 1</field>
+            <field name="height_in_m">100</field>
+            <field name="diameter_in_m">7</field>
+            <field name="payload_to_leo_in_t">50</field>
+            <field name="ship_type">small</field>
+            <field name="num_passengers">3</field>
+        </record>
+        
+        <record model="space_mission.spaceship" id="model_2">
+            <field name="name">Model 2</field>
+            <field name="height_in_m">200</field>
+            <field name="diameter_in_m">14</field>
+            <field name="payload_to_leo_in_t">100</field>
+            <field name="ship_type">large</field>
+            <field name="num_passengers">6</field>
+        </record>
+        
+        <record model="space_mission.spaceship" id="model_3">
+            <field name="name">Model 3</field>
+            <field name="ship_type">large</field>
+            <field name="num_passengers">8</field>
+        </record>
+    </data>    
+</odoo>
