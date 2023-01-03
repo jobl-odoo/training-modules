@@ -13,7 +13,10 @@
     'category': 'Logistics',
     'version': '0.1',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/space_mission_security.xml',
+        'security/ir.model.access.csv',
+    ],
     'demo': [
         'demo/space_mission_demo.xml',
     ],
