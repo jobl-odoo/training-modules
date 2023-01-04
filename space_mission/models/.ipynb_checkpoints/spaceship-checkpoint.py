@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-
+from odoo.exceptions import UserError
 
 class Spaceship(models.Model):
     
@@ -23,3 +23,8 @@ class Spaceship(models.Model):
                    ('large', 'Large')],)
     num_passengers = fields.Integer(string='Number of Passengers')
     active = fields.Boolean(string='Active', default=True)
+    
+    @api.constrains()
+    def _check_dimensions(self):
+        if self.diameter_in_m > self.height_in_m:
+            raise UserError('Height must be greater than diameter.')
