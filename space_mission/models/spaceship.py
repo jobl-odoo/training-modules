@@ -24,7 +24,8 @@ class Spaceship(models.Model):
     num_passengers = fields.Integer(string='Number of Passengers')
     active = fields.Boolean(string='Active', default=True)
     
-    @api.constrains()
+    @api.constrains('height_in_m', 'diameter_in_m')
     def _check_dimensions(self):
-        if self.diameter_in_m > self.height_in_m:
-            raise UserError('Height must be greater than diameter.')
+        for record in self:
+            if record.diameter_in_m > record.height_in_m:
+                raise UserError('Height must be greater than diameter.')
