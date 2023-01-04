@@ -24,6 +24,10 @@ class Spaceship(models.Model):
     num_passengers = fields.Integer(string='Number of Passengers')
     active = fields.Boolean(string='Active', default=True)
     
+    mission_ids = fields.One2many(comodel_name='space_mission.mission',
+                                  inverse_name='spaceship_id',
+                                  string='Missions')
+    
     @api.constrains('height_in_m', 'diameter_in_m')
     def _check_dimensions(self):
         for record in self:

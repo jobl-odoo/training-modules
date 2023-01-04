@@ -6,8 +6,19 @@
             <field name="res_model">space_mission.spaceship</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
-                <p class="o_view_content_smiling_face">
+                <p class="o_view_nocontent_smiling_face">
                     Create the first spaceship
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="mission_list_action">
+            <field name="name">Missions</field>
+            <field name="res_model">space_mission.mission</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create the first mission
                 </p>
             </field>
         </record>
@@ -25,5 +36,10 @@
                   parent="menu_space_mission_sub"
                   sequence="3"
                   action="spaceship_list_action"/>
+        <menuitem name="Missions"
+                  id="menu_space_mission_missions"
+                  parent="menu_space_mission_sub"
+                  sequence="4"
+                  action="mission_list_action"/>
     </data>
 </odoo>
