@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_project_edit_project_inherit_space_mission">
+            <field name="name">project.edit_project.inherit.space_mission</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <field name="active" position="before">
+                    <field name="mission_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -12,13 +12,14 @@
     'website': 'https://www.odoo.com',
     'category': 'Logistics',
     'version': '0.1',
-    'depends': ['base'],
+    'depends': ['project'],
     'data': [
         'security/space_mission_security.xml',
         'security/ir.model.access.csv',
         'views/space_mission_menuitems.xml',
         'views/spaceship_views.xml',
         'views/mission_views.xml',
+        'views/project_views_inherit.xml',
     ],
     'demo': [
         'demo/space_mission_demo.xml',

@@ -9,13 +9,13 @@ class Mission(models.Model):
     _description = 'Mission Info'
     
     spaceship_id = fields.Many2one(comodel_name='space_mission.spaceship',
-                                 string='Spaceship',
-                                 ondelete='cascade',
-                                 required=True)
+                                   string='Spaceship',
+                                   ondelete='cascade',
+                                   required=True)
     name = fields.Char(string='Title',
                        related='spaceship_id.name')
     crew_member_ids = fields.Many2many(comodel_name='res.partner',
-                                    string='Crew Members')
+                                       string='Crew Members')
     launch_date = fields.Date(string='Launch Date')
     return_date = fields.Date(string='Return Date')
     fuel_required_in_t = fields.Integer(string='Fuel Required in Tons')
@@ -25,6 +25,11 @@ class Mission(models.Model):
                                                   ('medium', 'Medium'),
                                                   ('high', 'High')])
     
+    related_project_ids = fields.One2many(comodel_name='project.project',
+                                          inverse_name='mission_id',
+                                          string='Related Projects')
+    
+                                  
     mission_duration = fields.Integer(string='Mission Length in Days',
                                       compute='_compute_mission_duration',
                                       store=True)

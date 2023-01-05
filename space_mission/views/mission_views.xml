@@ -24,6 +24,9 @@
                                 <page string="Crew Members">
                                     <field name="crew_member_ids"/>
                                 </page>
+                                <page string="Projects">
+                                    <field name="related_project_ids"/>
+                                </page>
                             </notebook>
                         </group>
                     </sheet>
