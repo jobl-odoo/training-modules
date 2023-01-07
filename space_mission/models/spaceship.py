@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
 class Spaceship(models.Model):
@@ -32,4 +32,4 @@ class Spaceship(models.Model):
     def _check_dimensions(self):
         for record in self:
             if record.diameter_in_m > record.height_in_m:
-                raise UserError('Height must be greater than diameter.')
+                raise UserError(_('Height must be greater than diameter.'))
