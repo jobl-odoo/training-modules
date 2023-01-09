@@ -13,7 +13,7 @@
     'license': 'OPL-1',
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base'],
+    'depends': ['base', 'sale'],
     'data': [
         'views/sale_order_views_inherit.xml',
     ],
