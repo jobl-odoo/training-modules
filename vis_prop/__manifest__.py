@@ -15,8 +15,9 @@
     'license': 'OPL-1',
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base', 'sale', 'project'],
+    'depends': ['sale_project'],
     'data': [
-        'views/sale_order_views_inherit.xml'
+        'views/sale_order_views_inherit.xml',
+        'views/project_task_views_inherit.xml',
     ],
 }
