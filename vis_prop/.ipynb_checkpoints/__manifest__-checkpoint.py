@@ -6,10 +6,10 @@
     'description': """
         When a Photographer is updated on an order/task,
         update the field across all connected orders
-        - RFQs
-        - PO
         - SO
-        - Task""",
+        - Task
+        
+        Task ID: 3091245""",
     'author': 'Odoo Inc',
     'website': 'https://www.odoo.com',
     'license': 'OPL-1',
