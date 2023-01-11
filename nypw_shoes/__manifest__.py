@@ -17,6 +17,6 @@
     'version': '0.1',
     'depends': ['sale'],
     'data': [
-
+        'views/product_template_views_inherit.xml',
     ],
 }
