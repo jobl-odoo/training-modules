@@ -16,6 +16,6 @@
     'version': '0.1',
     'depends': ['sale_subscription'],
     'data': [
-        'views/product_template_views_inherit.xml',
+        'views/sale_subscription_views_inherit.xml',
     ],
 }
