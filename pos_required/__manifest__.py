@@ -15,8 +15,9 @@
     'license': 'OPL-1',
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['pos'],
-    'data': [],
+    'depends': [
+        'point_of_sale'
+    ],
     'assets': {
         'point_of_sale.assets': [
             'pos_required/static/src/js/ClientDetailsEdit.js',
