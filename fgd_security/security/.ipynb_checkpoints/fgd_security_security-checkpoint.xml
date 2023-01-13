@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="group_fgd_security_commission" model="res.groups">
+        <field name="name">Sale / Administration (Commission)</field>
+    </record>
+    
+    <record id="group_fgd_security_all_docs" model="res.groups">
+        <field name="name">Sale / User: All Documents</field>
+    </record>
 </odoo>

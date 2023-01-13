@@ -1,1 +1,3 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+fgd_security_commision,fgd security commission,model_res_partner,group_fgd_security_commission,1,1,1,0
+fgd_security_all_docs,fgd security all docs,model_res_partner,group_fgd_security_all_docs,1,0,1,0

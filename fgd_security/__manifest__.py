@@ -18,7 +18,8 @@
     'category': 'Uncategorized',
     'version': '0.1',
     'depends': [
-        'base'
+        'contacts',
+        'sale_management',
     ],
     'data': [
         'security/fgd_security_security.xml',
