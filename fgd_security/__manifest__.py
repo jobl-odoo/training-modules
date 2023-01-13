@@ -21,5 +21,7 @@
         'base'
     ],
     'data': [
+        'security/fgd_security_security.xml',
+        'security/ir.model.access.csv',
     ],
 }
