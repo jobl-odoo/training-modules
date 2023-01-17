@@ -24,7 +24,7 @@
     'category': 'Uncategorized',
     'version': '0.1',
     'depends': [
-        'sale'
+        'account', 'sale_management'
     ],
     'data': [
         'views/sale_order_views_inherit.xml',
