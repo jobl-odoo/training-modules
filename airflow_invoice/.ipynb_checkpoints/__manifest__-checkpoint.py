@@ -24,7 +24,10 @@
     'category': 'Uncategorized',
     'version': '0.1',
     'depends': [
-        'account', 'sale_management'
+        'account', 
+        'sale_management',
+        'l10n_generic_coa',
+        'l10n_generic_auto_transfer_demo',
     ],
     'data': [
         'views/sale_order_views_inherit.xml',

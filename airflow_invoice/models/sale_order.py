@@ -7,9 +7,7 @@ class SaleOrder(models.Model):
     _inherit = 'sale.order'
     
     
-    project_manager = field.Many2one(comodel_name='res.partner',
-                                     related='account.move',
+    project_manager = fields.Many2one(comodel_name='res.partner',
                                      string='Project Manager')
     
-    project_name = field.Char(related='account.move',
-                              string='Project Name')
+    project_name = fields.Char(string='Project Name')
