@@ -6,6 +6,10 @@
             <field name="model">account.move</field>
             <field name="inherit_id" ref="account.view_move_form"/>
             <field name="arch" type="xml">
+                <xpath expr="//field[@name='team_id']" position='after'>
+                    <field name="sales_team_email"/>
+                    <field name="sales_team_phone"/>
+                </xpath>
                 <xpath expr="//field[@name='to_check']" position='after'>
                     <field name="ship_date"/>
                     <field name="shipping_method"/>

@@ -34,5 +34,6 @@
         'views/sale_order_views_inherit.xml',
         'views/account_move_views_inherit.xml',
         'views/crm_team_views_inherit.xml',
+        'report/report_invoice_inherit.xml',
     ],
 }

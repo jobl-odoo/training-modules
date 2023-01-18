@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit_airflow_invoice" inherit_id="account.report_invoice_document" priority="15">
+        
+        <!-- Adding Billing Address Header -->
+        <xpath expr="//address" position='before'>
+            <strong>Billing Address:</strong>
+        </xpath>
+        
+        <!-- Adding New Fields -->
+        <xpath expr="//div[@id='informations']" position='inside'>
+            <div class="col-auto col-3 mw-100 mb-2" t-if="o.ship_date" name="ship_date">
+                <strong>Ship Date:</strong>
+                <span class="m-0" t-field="o.ship_date"/>
+            </div>
+            <div class="col-auto col-3 mw-100 mb-2" t-if="o.shipping_method" name="shipping_method">
+                <strong>Shipping Method:</strong>
+                <span class="m-0" t-field="o.shipping_method"/>
+            </div>
+            <div class="col-auto col-3 mw-100 mb-2" t-if="o.project_manager_id" name="project_manager_id">
+                <strong>Project Manager:</strong>
+                <span class="m-0" t-field="o.project_manager_id"/>
+            </div>
+            <div class="col-auto col-3 mw-100 mb-2" t-if="o.project_name_id" name="project_name_id">
+                <strong>Project Name:</strong>
+                <span class="m-0" t-field="o.project_name_id"/>
+            </div>
+            <div class="col-auto col-3 mw-100 mb-2" t-if="o.team_id" name="team_id">
+                <strong>Sales Team:</strong>
+                <span class="m-0" t-field="o.team_id"/>
+            </div>
+            <div class="col-auto col-3 mw-100 mb-2" t-if="o.sales_team_email" name="team_id_email">
+                <strong>Email:</strong>
+                <span class="m-0" t-field="o.sales_team_email"/>
+            </div>
+            <div class="col-auto col-3 mw-100 mb-2" t-if="o.sales_team_phone" name="team_id_phone">
+                <strong>Phone:</strong>
+                <span class="m-0" t-field="o.sales_team_phone"/>
+            </div>
+        </xpath>
+        
+        <!-- Table Adjustments -->
+        <xpath expr="//th[@name='th_description']/span" position='replace'>
+            <span>Customer PO</span>
+        </xpath>
+        <xpath expr="//div[@name='origin']" position='replace'/>
+        <xpath expr="//th[@name='th_priceunit']" position='replace'/>
+        <xpath expr="//th[@name='th_taxes']" position='replace'/>
+        <xpath expr="//span[@t-field='line.price_unit']/.." position='replace'/>
+        <xpath expr="//span[@id='line_tax_ids']/.." position='replace'/>
+        
+        <!-- Tax Description Adjustments -->
+        <xpath expr="//span[@t-esc='amount_by_group[0]']/.." position='replace'>
+            <td><span class="text-nowrap">Sales Tax!!</span></td>
+        </xpath>
+        <xpath expr="//tr[@class='border-black o_subtotal']" t-if="not o.amount_by_group" position="after">
+            <t t-if="not o.amount_by_group">
+                <td><p>Tax Exempt</p></td>
+                <td></td>
+            </t>
+        </xpath>
+               
+    </template>
+</odoo>
