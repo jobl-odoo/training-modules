@@ -28,8 +28,11 @@
         'sale_management',
         'l10n_generic_coa',
         'l10n_generic_auto_transfer_demo',
+        'delivery_ups',
     ],
     'data': [
         'views/sale_order_views_inherit.xml',
+        'views/account_move_views_inherit.xml',
+        'views/crm_team_views_inherit.xml',
     ],
 }

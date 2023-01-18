@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_view_move_form_inherit" model="ir.ui.view">
+            <field name="name">account.move.form.inherit.airflow_invoice</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='to_check']" position='after'>
+                    <field name="ship_date"/>
+                    <field name="shipping_method"/>
+                    <field name="project_manager_id"/>
+                    <field name="project_name_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
