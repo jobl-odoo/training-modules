@@ -14,7 +14,7 @@
                     <field name="ship_date"/>
                     <field name="shipping_method"/>
                     <field name="project_manager_id"/>
-                    <field name="project_name_id"/>
+                    <field name="project_name"/>
                 </xpath>
             </field>
         </record>

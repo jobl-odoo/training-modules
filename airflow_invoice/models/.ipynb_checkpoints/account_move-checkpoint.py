@@ -12,10 +12,10 @@ class AccountMove(models.Model):
     shipping_method = fields.Many2one(comodel_name='delivery.carrier',
                                       string='Shipping Method')
     
-    project_manager_id = fields.Many2one(related='invoice_line_ids.sale_line_ids.order_id.project_manager',
+    project_manager_id = fields.Many2one(related='invoice_line_ids.sale_line_ids.order_id.project_manager_id',
                                          string='Project Manager')
     
-    project_name_id = fields.Char(related='invoice_line_ids.sale_line_ids.order_id.project_name',
+    project_name = fields.Char(related='invoice_line_ids.sale_line_ids.order_id.project_name',
                                       string='Project Name')
     
     sales_team_email = fields.Char(related='team_id.email',
