@@ -11,7 +11,6 @@ class PurchaseOrder(models.Model):
         """Called by Scheduler every night at 00:00
             Confirms all RFQs made to central store."""
         
-        print("MADE IT TO METHOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        for record in self.search([('state', 'in', ['draft', 'sent']), ('user_id', '=', 1), ('partner_id', '=', 1)]):
-            print("AAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHH", record)
+        # For Odoo Search Extension [["state", "in", ["draft", "sent"]], ["user_id", "=", 1], ["partner_id", "=", 1]]
+        for record in self.search([("state", "in", ["draft", "sent"]), ("user_id", "=", 2), ("partner_id", "=", 1)]):
             record.button_confirm()
