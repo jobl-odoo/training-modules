@@ -20,5 +20,6 @@
         'contacts',
     ],
     'data': [
+        'views/purchase_views_inherit.xml',
     ],
 }
