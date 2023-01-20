@@ -11,6 +11,7 @@ class PurchaseOrder(models.Model):
         """Called by Scheduler every night at 00:00
             Confirms all RFQs made to central store."""
         
-        # for record in self.search(['|', ('state', '=', 'draft'), ('state', '=', 'sent'), ('state', '=', 'approve')]):
-        for record in self.search([('state', 'in', ['draft', 'sent', 'approve']), ('user_id', '=', 1), ('partner_id', '=', 1)]):
+        print("MADE IT TO METHOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        for record in self.search([('state', 'in', ['draft', 'sent']), ('user_id', '=', 1), ('partner_id', '=', 1)]):
+            print("AAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHH", record)
             record.button_confirm()
