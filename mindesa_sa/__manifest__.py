@@ -16,7 +16,7 @@
     'version': '0.1',
     'depends': [
         'purchase',
-        'inventory',
+        'stock',
         'contacts',
     ],
     'data': [
